@@ -1,9 +1,7 @@
 import React from 'react';
-import Login from "./project/login"
-import Reg from "./project/reg"
-import Nav from "./project/"
-import Navi from "./project/navi"
-import Haed from "./project/navi/head"
+import{HashRouter,NavLink,Switch,Route}from "react-router-dom"
+import Hone from "./App/hone"
+import Base from "./App/Base"
 // import Base from "./project/ces"
 let style = {
   width: "100%",
@@ -12,9 +10,11 @@ let style = {
 function App() {
   return (
     <div className="App" style={style}>
-      <Login></Login>
-      <Reg></Reg>
-      <Nav></Nav>
+      <HashRouter>
+      <Route  path="/hone" component={Hone.Head}/>
+      <Route exact path="/hone/:lunbo" component={Hone.Lunbo}/>
+      <Route path="/hone" component={Base}/>
+      </HashRouter>
     </div>
   );
 }

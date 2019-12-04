@@ -5,6 +5,7 @@ import imgb from "../img/地球.svg"
 import imgc from "../img/我的.svg"
 import imgd from "../img/账号.svg"
 import imge from "../img/添加.svg"
+
 class TabBarExample extends React.Component {
 
   state = {
@@ -15,6 +16,7 @@ class TabBarExample extends React.Component {
   render() {
     return (
       <div style={{ position: 'fixed', height: '100%', width: '100%', top: 0 }}>
+       
         <TabBar
           unselectedTintColor="#949494"
           tintColor="#33A3F4"
@@ -22,6 +24,7 @@ class TabBarExample extends React.Component {
           hidden={this.state.hidden}
         // tabBarPosition="top"
         >
+       
           <TabBar.Item
             title="推荐"
             key="Life"
@@ -81,8 +84,9 @@ class TabBarExample extends React.Component {
             }
           >
           </TabBar.Item>
-
+         
         </TabBar>
+       
       </div>
     );
   }
