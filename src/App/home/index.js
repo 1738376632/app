@@ -1,6 +1,8 @@
 import { NavBar } from "antd-mobile";
+import imga from "../../img/地球.svg"
 import React from "react";
-import{HashRouter,Link,Switch,Route}from "react-router-dom"
+// import{HashRouter,Link,Switch,Route}from "react-router-dom"
+import Lubo from "./lubo"
 // import imga from "../img/地球.svg"
 export default class Nav extends React.Component {
   state = {
@@ -17,11 +19,11 @@ export default class Nav extends React.Component {
           leftContent="精选投稿"
           rightContent={[
             // eslint-disable-next-line jsx-a11y/alt-text
-            // <img src={imga}/>
-            <Link to="/hone/lunbo">About</Link>
+            <img  key=' 10'src={imga}/>
           ]}
         >
         </NavBar>
+        <Lubo></Lubo>
       </div>
     );
   }

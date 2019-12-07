@@ -1,21 +1,18 @@
 import React from 'react';
-import{HashRouter,NavLink,Switch,Route}from "react-router-dom"
-import Hone from "./App/hone"
-import Base from "./App/Base"
+import { HashRouter, Route } from "react-router-dom"
+import Navbar from "./App/index.js"
+// import Login  from "./App/login"
+import Hone   from "./App/home"
 // import Base from "./project/ces"
-let style = {
-  width: "100%",
-  height: "100%"
-}
+import Found from "./App/found"
+
 function App() {
   return (
-    <div className="App" style={style}>
-      <HashRouter>
-      <Route  path="/hone" component={Hone.Head}/>
-      <Route exact path="/hone/:lunbo" component={Hone.Lunbo}/>
-      <Route path="/hone" component={Base}/>
-      </HashRouter>
-    </div>
+    <HashRouter>
+      <Route  exact path="/" component={Hone}></Route>
+      <Route exact path="/found" component={Found}></Route>
+      <Route path="/" component={Navbar}></Route>
+    </HashRouter>
   );
 }
 

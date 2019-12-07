@@ -22,7 +22,7 @@ export default class Demo extends React.Component {
 
         return (
             <div>
-                <span style={{position:"fixed",}}>哈哈哈</span>
+                <span style={{position:"fixed",}}></span>
                 <WhiteSpace />
                 <Tabs tabs={tabs} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={5} />}>
                     {this.renderContent}

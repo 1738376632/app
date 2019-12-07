@@ -39,11 +39,12 @@ export default class Zebra extends React.Component {
                 top: this.state.slideIndex === index ? -10 : 0,
                 boxShadow: '2px 1px 1px rgba(0, 0, 0, 0.2)',
                 marginTop: "35px",
-                height: "420px",
+                height: "400px",
                 borderRadius: "15px"
               }}
             >
               <img
+                key={index}
                 src={`https://zos.alipayobjects.com/rmsportal/${val}.png`}
                 alt=""
                 style={{ width: '100%', verticalAlign: 'top', borderRadius: "15px 15px 0px 0px" }}

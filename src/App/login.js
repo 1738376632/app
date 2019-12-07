@@ -136,7 +136,6 @@ class ErrorInputExample extends React.Component {
             inline
             size="small"
             style={{
-              marginRight: "4px",
               background: "#9940FF",
               color: "#fff",
               float: "right",
