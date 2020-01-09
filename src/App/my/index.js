@@ -1,8 +1,10 @@
 import React from "react";
 import NavBar from "./NavBar"
+import Middle from "./Middle"
+import Section from "./Section"
 
 let style = {
-    div: {
+    header: {
         backgroundColor: "#fb7299",
         height: "42px",
         width: "100%",
@@ -17,8 +19,10 @@ export default class My extends React.Component {
     render() {
         return (
             <div>
-                <div style={style.div}>我的句库</div>
+                <header style={style.header}>我的句库</header>
                 <NavBar></NavBar>
+                <Middle></Middle>
+                <Section></Section>
             </div>
         );
     }

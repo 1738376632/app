@@ -2,26 +2,26 @@ import React from "react";
 import img from "../../img/搜索.png"
 
 let style = {
-    div: {
+    nav: {
         width: "100%",
-        marginTop:"10px",
+        marginTop: "10px",
         display: "flex",
         justifyContent: "space-around",
-        borderButton:"1px solid #00f"
+        borderButton: "1px solid #00f"
     },
-    dl:{
-        width:"60px",
-        height:"60px",
+    dl: {
+        width: "60px",
+        height: "50px",
     },
-    dt:{
+    dt: {
         textAlign: "center",
         lineHeight: "50px",
         backgroundColor: "#fb7299",
-        height:"50px",
+        height: "50px",
         borderRadius: "50%",
     },
-    dd:{
-        textAlign:"center",
+    dd: {
+        textAlign: "center",
     }
 }
 
@@ -53,24 +53,22 @@ export default class NavBar extends React.Component {
     render() {
         let { data } = this.state
         return (
-            <div style={style.div}>
+            <nav style={style.nav}>
                 {
                     data.map((value) => {
                         return (
                             <dl style={style.dl}>
                                 <dt style={style.dt}>
-                                    <img src={value.img}></img>
+                                    <img src={value.img} alt=""></img>
                                 </dt>
                                 <dd style={style.dd}>
                                     {value.name}
                                 </dd>
                             </dl>
-
-
                         )
                     })
                 }
-            </div>
+            </nav>
         );
     }
 }

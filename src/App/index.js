@@ -59,12 +59,12 @@ class TabBarExample extends React.Component {
     console.log(this.props)
     return (
       <div style={{ position: 'fixed', bottom: "0px", width: "100%" }}>
-        <ul style={{ display: "flex", width: "100%", justifyContent: "space-between", background: "#33A3F4" }}>
+        <ul style={{ display: "flex", width: "100%", justifyContent: "space-between", background: "#fff" }}>
           {this.state.data.map(item => {
             return (
               <li >
                 <NavLink exact to={item.path} activeStyle={style}>
-                  <img  style={style.img} src={item.img} ></img>
+                  <img  style={style.img} src={item.img} alt=""></img>
                   {item.title == 0 ? "" : <span>{item.title}</span>}
                 </NavLink>
               </li>
