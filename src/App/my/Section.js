@@ -40,6 +40,8 @@ let style = {
 export default class Section extends React.Component {
     // 数据渲染预留位置
     state = {
+        attribute: false,
+        attribute1: false,
         data: {
             My: [
                 {
@@ -57,35 +59,78 @@ export default class Section extends React.Component {
             ]
         }
     }
+    OnShow = () => {
+        if (this.state.attribute === false) {
+            this.setState({
+                attribute: true
+            })
+        } else {
+            this.setState({
+                attribute: false
+            })
+        }
+    }
+    OnShow1 = () => {
+        if (this.state.attribute1 === false) {
+            this.setState({
+                attribute1: true
+            })
+        } else {
+            this.setState({
+                attribute1: false
+            })
+        }
+    }
     render() {
         let { My, Album } = this.state.data
+        let { attribute, attribute1 } = this.state
+
+        // React条件渲染
+        let Created
+        if (attribute === true) {
+            Created = <ul style={style.ul}>
+                {/* 预留我收藏的专辑位置 */}
+                {
+                    Album.map(value => {
+                        return <li key={value.id}>{value.name}</li>
+                    })
+                }
+            </ul>
+        } else {
+            Created = ""
+        }
+
+        let Collection
+        if (attribute1 === true) {
+            Collection = <ul style={style.ul}>
+                {/* 预留我收藏的专辑位置 */}
+                {
+                    My.map(value => {
+                        return <li key={value.id}>{value.name}</li>
+                    })
+                }
+            </ul>
+        } else {
+            Collection = ""
+        }
+
         return (
             <section style={style.section}>
-                <p style={style.p}>
+                <p style={style.p} onClick={this.OnShow}>
                     <span style={style.float}><img src={img} alt=""></img></span>
                     <span style={{ ...style.text, ...style.float }}>我创建的专辑</span>
                     <span style={style.float2}><img src={img2} alt=""></img></span>
                 </p>
-                <ul style={style.ul}>
-                    {/* 预留我创建的专辑位置 */}
-                    {
-                        Album.map(value => {
-                            return <li key={value.id}>{value.name}</li>
-                        })
-                    }
-                </ul>
-                <p style={{ ...style.p, ...style.solid }}>
+                {
+                    Created
+                }
+                <p style={{ ...style.p, ...style.solid }} onClick={this.OnShow1}>
                     <span style={style.float}><img src={img} alt=""></img></span>
-                    <span style={{ ...style.text, ...style.float }}>我创建的专辑</span>
+                    <span style={{ ...style.text, ...style.float }} >我创建的专辑</span>
                 </p>
-                <ul style={style.ul}>
-                    {/* 预留我收藏的专辑位置 */}
-                    {
-                        My.map(value => {
-                            return <li key={value.id}>{value.name}</li>
-                        })
-                    }
-                </ul>
+                {
+                    Collection
+                }
 
             </section>
         )

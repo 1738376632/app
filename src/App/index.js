@@ -76,4 +76,3 @@ class TabBarExample extends React.Component {
   }
 }
 export default TabBarExample
-  // < TabBar.Item
