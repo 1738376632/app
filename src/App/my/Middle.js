@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import A from "../../img/笔.png"
 import B from "../../img/喜欢.png"
 import C from "../../img/收 藏.png"
@@ -47,22 +48,26 @@ export default class Middle extends React.Component {
             {
                 img: A,
                 name: "发布的句子",
-                img2: img
+                img2: img,
+                path: "/lush"
             },
             {
                 img: B,
                 name: "喜欢的句子",
-                img2: img
+                img2: img,
+                path: "/like"
             },
             {
                 img: C,
                 name: "收藏的句子",
-                img2: img
+                img2: img,
+                path: "/collection"
             },
             {
                 img: D,
                 name: "我的书签",
-                img2: img
+                img2: img,
+                path: "/bookmark",
             }
         ]
     }
@@ -73,19 +78,22 @@ export default class Middle extends React.Component {
                 {
                     data.map(value => {
                         return (
-                            <li style={style.li}>
-                                <span style={{ ...style.span, ...style.float }}>
-                                    <img src={value.img} alt="" style={style.img}></img>
-                                </span>
-                                <span style={{ ...style.span, ...style.float, ...style.text }}>
-                                    {
-                                        value.name
-                                    }
-                                </span>
-                                <span style={{ ...style.span, ...style.float2 }}>
-                                    <img src={value.img2} alt="" style={style.img}></img>
-                                </span>
-                            </li>
+                            <Link exact to={value.path}>
+                                <li style={style.li}>
+                                    <span style={{ ...style.span, ...style.float }}>
+                                        <img src={value.img} alt="" style={style.img}></img>
+                                    </span>
+                                    <span style={{ ...style.span, ...style.float, ...style.text }}>
+                                        {
+                                            value.name
+                                        }
+                                    </span>
+                                    <span style={{ ...style.span, ...style.float2 }}>
+                                        <img src={value.img2} alt="" style={style.img}></img>
+                                    </span>
+                                </li>
+                            </Link>
+
                         )
                     })
                 }

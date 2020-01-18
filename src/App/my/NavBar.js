@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import img from "../../img/搜索.png"
+
+
 
 let style = {
     nav: {
@@ -31,22 +34,27 @@ export default class NavBar extends React.Component {
             {
                 img: img,
                 name: "时光轴",
+                path:"/timeline",
             },
             {
                 img: img,
                 name: "最近浏览",
+                path:"/lately",
             },
             {
                 img: img,
                 name: "我的参与",
+                path:"/partake"
             },
             {
                 img: img,
                 name: "我的话题",
+                path:"/talk"
             },
             {
                 img: img,
                 name: "搜索句库",
+                path:"/search"
             },
         ]
     }
@@ -57,14 +65,17 @@ export default class NavBar extends React.Component {
                 {
                     data.map((value) => {
                         return (
-                            <dl style={style.dl}>
-                                <dt style={style.dt}>
-                                    <img src={value.img} alt=""></img>
-                                </dt>
-                                <dd style={style.dd}>
-                                    {value.name}
-                                </dd>
-                            </dl>
+                            <Link to={value.path}>
+                                <dl style={style.dl}>
+                                    <dt style={style.dt}>
+                                        <img src={value.img} alt=""></img>
+                                    </dt>
+                                    <dd style={style.dd}>
+                                        {value.name}
+                                    </dd>
+                                </dl>
+                            </Link>
+
                         )
                     })
                 }

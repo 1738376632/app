@@ -3,5 +3,6 @@
     background: rgb(245, 245, 249);
     overflow: hidden;
     z-index: 10;
+    /* border-bottom: ; */
     /* width: 100%; */
 }

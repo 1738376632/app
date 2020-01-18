@@ -3,6 +3,7 @@ import NavBar from "./NavBar"
 import Middle from "./Middle"
 import Section from "./Section"
 
+
 let style = {
     header: {
         backgroundColor: "#fb7299",
