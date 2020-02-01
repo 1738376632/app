@@ -5,7 +5,9 @@ let style = {
     div: {
         width: "100%",
         height: "100px",
-        // backgroundColor:"red",
+        backgroundColor:"#fff",
+        textAlign: "center",
+        lineHeight: "100px",
         borderTop: "1px solid #cccccc",
         borderBottom: "1px solid #cccccc",
     }
@@ -16,7 +18,7 @@ export default class Demo extends React.Component {
         data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0,]
     }
     renderContent = tab =>
-        (<div style={{ display: 'flex', height: '422px', backgroundColor: '#fff', flexDirection: "column", flexWrap: "wrap" }}>
+        (<div style={{ display: 'flex', height: '422px', backgroundColor: '#fff', flexWrap: "wrap" }}>
             {
                 this.state.data.map(volue => {
                     return (<div style={style.div}>哈哈哈</div>)
