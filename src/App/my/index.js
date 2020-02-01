@@ -5,8 +5,11 @@ import Section from "./Section"
 
 
 let style = {
+    div:{
+        backgroundColor:"#fff"
+    },
     header: {
-        backgroundColor: "#fb7299",
+        backgroundColor: "#FF3366 ",
         height: "42px",
         width: "100%",
         fontSize: "20px",
@@ -19,7 +22,7 @@ let style = {
 export default class My extends React.Component {
     render() {
         return (
-            <div>
+            <div style={style.div}>
                 <header style={style.header}>我的句库</header>
                 <NavBar></NavBar>
                 <Middle></Middle>

@@ -1,4 +1,4 @@
-import { NavBar, SearchBar, WhiteSpace, WingBlank } from "antd-mobile";
+import { SearchBar, } from "antd-mobile";
 import React from "react";
 import Tad from "./Tab"
 
@@ -14,10 +14,13 @@ export default class Nav extends React.Component {
         return (
             <div>
                 <SearchBar
+
                     placeholder="搜你想搜的"
                     ref={ref => this.autoFocusInst = ref}
                     cancelText={"搜索"}
-                    style={{ background: "#fb7299", paddingLeft: "10px" }}
+                    style={{
+                        background: "#FF3366", paddingLeft: "10px",
+                    }}
                     onCancel={this.search} />
                 <Tad></Tad>
             </div>

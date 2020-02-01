@@ -1,4 +1,4 @@
-import { TabBar } from 'antd-mobile';
+
 import React from "react";
 import { NavLink } from "react-router-dom"
 import imga from "../img/房子.svg"
@@ -6,12 +6,10 @@ import imgb from "../img/地球.svg"
 import imgc from "../img/我的.svg"
 import imgd from "../img/账号.svg"
 import imge from "../img/添加.svg"
-import Home from "./home"
-import found from "./found"
 
 
 let style = {
-  color: "#fb7299",
+  color: " #FF3366 ",
   img: {
     display: "block",
     width: '22px',
@@ -59,13 +57,13 @@ class TabBarExample extends React.Component {
     console.log(this.props)
     return (
       <div style={{ position: 'fixed', bottom: "0px", width: "100%" }}>
-        <ul style={{ display: "flex", width: "100%", justifyContent: "space-between", background: "#fff" }}>
+        <ul style={{ display: "flex", width: "100%", justifyContent: "space-between", background: "#996666" }}>
           {this.state.data.map(item => {
             return (
               <li >
                 <NavLink exact to={item.path} activeStyle={style}>
-                  <img  style={style.img} src={item.img} alt=""></img>
-                  {item.title == 0 ? "" : <span>{item.title}</span>}
+                  <img style={style.img} src={item.img} alt=""></img>
+                  {item.title ===0 ? "" : <span>{item.title}</span>}
                 </NavLink>
               </li>
             )

@@ -19,7 +19,7 @@ let style = {
     dt: {
         textAlign: "center",
         lineHeight: "50px",
-        backgroundColor: "#fb7299",
+        backgroundColor: "#FF3366 ",
         height: "50px",
         borderRadius: "50%",
     },

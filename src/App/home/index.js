@@ -14,7 +14,7 @@ export default class Nav extends React.Component {
     return (
       <div>
         <NavBar
-          style={{ background: "#fb7299",zIndex:"3" }}
+          style={{ background: "#FF3366 ",zIndex:"3" }}
           mode="dark"
           leftContent="精选投稿"
           rightContent={[

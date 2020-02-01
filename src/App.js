@@ -1,11 +1,14 @@
 import React from 'react';
-import { HashRouter, Route, Link } from "react-router-dom"
+import { HashRouter, Route,} from "react-router-dom"
 import Navbar from "./App/index.js"
 import Hone from "./App/home"
 import Found from "./App/found"
 import My from "./App/my"
 import Account from "./App/Account"
 import Push from "./App/push"
+import Login from "./App/login"
+import Reg from "./App/reg"
+import Error from "./App/error"
 
 // 我的页面中的子页面
 import Bookmark from "./App/my/bookmark"
@@ -21,9 +24,14 @@ import Collection from "./App/my/collection"
 function App() {
   return (
     <HashRouter>
+
       <Route exact path="/" component={Hone}></Route>
       <Route exact path="/found" component={Found}></Route>
       <Route exact path="/my" component={My}></Route>
+      <Route exact path="/login" component={Login}></Route>
+      <Route exact path="/reg" component={Reg}></Route>
+                    {/* 404页面 */}
+      <Route exact path="/error" component={Error}></Route>
 
       {/* 我的页面中的子页面 */}
       <Route exact path="/bookmark" component={Bookmark}></Route>

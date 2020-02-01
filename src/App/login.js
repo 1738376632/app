@@ -1,7 +1,15 @@
 import { InputItem, List, Toast, Button } from "antd-mobile";
 import React from "react";
+import { Link } from "react-router-dom"
 import imga from "../img/maitian-002.jpg";
 let style = {
+  header:{
+    fontSize: "20px",
+    backgroundColor: "#FF3366 ",
+    color: "rgb(255, 255, 255)",
+    textAlign: "center",
+    lineHeight:"40px"
+  },
   margin: {
     paddingTop: "20px",
     marginLeft: "10px",
@@ -88,6 +96,9 @@ class ErrorInputExample extends React.Component {
   render() {
     return (
       <div style={style.div}>
+        <header style={style.header}>
+             <h4>登录界面</h4> 
+        </header>
         <div style={style.span}>
           <h4>登录句子控</h4>
         </div>
@@ -131,6 +142,7 @@ class ErrorInputExample extends React.Component {
           >
             登录
           </Button>
+          <Link to="/reg">
           <Button
             type="ghost"
             inline
@@ -143,8 +155,11 @@ class ErrorInputExample extends React.Component {
             }}
             onClick={this.reg}
           >
+          
             注册
           </Button>
+          </Link>
+         
         </div>
       </div>
     );

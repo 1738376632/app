@@ -2,6 +2,13 @@ import { InputItem, List, Toast, Button } from "antd-mobile";
 import React from "react";
 import imga from "../img/maitian-002.jpg";
 let style = {
+  header:{
+    fontSize: "20px",
+    backgroundColor: "#FF3366 ",
+    color: "rgb(255, 255, 255)",
+    textAlign: "center",
+    lineHeight:"40px"
+  },
   margin: {
     paddingTop: "20px",
     marginLeft: "10px",
@@ -88,6 +95,7 @@ class ErrorInputExample extends React.Component {
       alert("请输入正确的手机号");
     } else if (pasError) {
       alert("密码格式不正确");
+    // eslint-disable-next-line eqeqeq
     } else if (value != rev) {
       alert("两次输入密码不一致");
     } else {
@@ -97,6 +105,9 @@ class ErrorInputExample extends React.Component {
   render() {
     return (
       <div style={style.div}>
+         <header style={style.header}>
+             <h4>注册界面</h4> 
+        </header>
         <div style={style.span}>
           <h4>免费注册</h4>
         </div>
@@ -130,6 +141,7 @@ class ErrorInputExample extends React.Component {
           <InputItem
             type="password"
             placeholder="再次输入密码"
+            // eslint-disable-next-line eqeqeq
             error={this.state.password != this.state.rev}
             onErrorClick={this.revErrorClick}
             onChange={this.revChange}
@@ -149,7 +161,7 @@ class ErrorInputExample extends React.Component {
             }}
             onClick={this.submit}
           >
-            免费注册
+            立即注册
           </Button>
         </div>
       </div>
